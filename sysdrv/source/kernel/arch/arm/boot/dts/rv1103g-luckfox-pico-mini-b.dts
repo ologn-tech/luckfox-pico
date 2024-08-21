@@ -83,3 +83,14 @@
 &pwm1 {
 	status = "disabled";
 };
+
+/**********GPIO-LEDS**********/
+&leds {
+	ir_led_0: ir0 {
+		gpios = <&gpio1 RK_PC0 GPIO_ACTIVE_HIGH>;
+		linux,default-trigger = "camera";
+		default-state = "off";
+	};
+};
+
+
