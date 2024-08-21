@@ -91,6 +91,9 @@
 		linux,default-trigger = "camera";
 		default-state = "off";
 	};
+	ir_led_1: ir1 {
+		gpios = <&gpio1 RK_PC1 GPIO_ACTIVE_HIGH>;
+		linux,default-trigger = "camera";
+		default-state = "off";
+	};
 };
-
-
