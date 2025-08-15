@@ -73,6 +73,10 @@ post_chk() {
 	default_rkipc_ini=/tmp/rkipc-factory-config.ini
 
 	if [ ! -f "/oem/usr/share/rkipc.ini" ]; then
+		lsmod | grep ox03c10
+		if [ $? -eq 0 ]; then
+			ln -s -f /oem/usr/share/rkipc-ox03c10-100w.ini $default_rkipc_ini
+		fi
 		lsmod | grep mia1321
 		if [ $? -eq 0 ]; then
 			ln -s -f /oem/usr/share/rkipc-mia1321-100w.ini $default_rkipc_ini

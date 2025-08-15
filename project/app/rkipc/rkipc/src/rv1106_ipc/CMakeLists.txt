@@ -67,6 +67,7 @@ target_link_libraries(${PROJECT_NAME} pthread rockit rockchip_mpp rkaiq rtsp rka
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES rkipc-mia1321-100w.ini DESTINATION share)
+install(FILES rkipc-ox03c10-100w.ini DESTINATION share)
 install(FILES rkipc-300w.ini DESTINATION share)
 install(FILES rkipc-400w.ini DESTINATION share)
 install(FILES rkipc-500w.ini DESTINATION share)
